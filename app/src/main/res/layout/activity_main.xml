@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#FCE4EC">
+
+    <TextView
+        android:layout_width="269dp"
+        android:layout_height="269dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        android:text="Welcome to
+             R-Connect"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="#000000"
+
+        />
+
+    <ImageView
+        android:layout_width="470dp"
+        android:layout_height="174dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/handshake"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To join IIT-R family"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:textSize="40sp"
+        android:textColor="#000000">
+    </TextView>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center">
+    <Button
+        android:id="@+id/buttonl"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textSize="35sp"/>
+
+    <Button
+        android:id="@+id/buttonr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="Sign up"
+        android:textSize="35sp" />
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="70dp"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MADE WITH"
+            android:textSize="20sp"
+            android:textColor="#000000">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/text"
+            android:src="@drawable/love">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BY-DIVYANSH"
+            android:layout_toRightOf="@+id/img"
+            android:textSize="20sp"
+            android:textColor="#000000">
+
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>
