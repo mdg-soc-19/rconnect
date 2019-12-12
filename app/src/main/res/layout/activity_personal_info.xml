@@ -1,0 +1,102 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#AD1457"
+            android:text="Personal Info"
+            android:textAlignment="center"
+
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"></TextView>
+        <TextView
+            android:id="@+id/add"
+            android:layout_below="@+id/per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:paddingTop="20dp"
+            android:text="Add a Profile Photo"
+            android:textColor="#000000"
+            android:textSize="30sp"></TextView>
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_toRightOf="@+id/add"
+            android:layout_below="@+id/per"
+            android:layout_margin="20dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/plus"></ImageView>
+        <TextView
+            android:id="@+id/nick"
+            android:layout_below="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:paddingTop="50dp"
+            android:text="Nickname"
+            android:textColor="#000000"
+            android:textSize="30sp"></TextView>
+        <EditText
+            android:id="@+id/editText13"
+            android:layout_below="@+id/nick"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Enter Nickname"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp" />
+        <TextView
+            android:id="@+id/describe"
+            android:layout_below="@+id/editText13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:paddingTop="50dp"
+            android:text="A Line to describe yourself"
+            android:textColor="#000000"
+            android:textSize="30sp"></TextView>
+        <EditText
+            android:id="@+id/editText14"
+            android:layout_below="@+id/describe"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Start writing..."
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textAlignment="center"/>
+        <Button
+            android:id="@+id/button33"
+            android:layout_below="@+id/editText14"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="SUBMIT"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000" />
+
+        </RelativeLayout>
+</ScrollView>

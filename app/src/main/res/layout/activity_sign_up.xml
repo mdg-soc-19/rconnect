@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCE4EC">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
     android:orientation="vertical">
 
     <TextView
@@ -12,19 +18,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#AD1457"
+        android:padding="10dp"
         android:text="Sign up"
         android:textAlignment="center"
-
         android:textColor="#FFFFFF"
-        android:textSize="50sp"></TextView>
+        android:textSize="50dp"></TextView>
 
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
-        android:paddingTop="10dp"
-        android:text="Name"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:text="Your iit-r email"
         android:textColor="#000000"
         android:textSize="30sp"></TextView>
 
@@ -33,28 +38,72 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/border"
         android:ems="10"
-        android:hint="Enter Name"
-        android:inputType="textPersonName"
+        android:hint="Enter iit-r E-mail"
+        android:inputType="textEmailAddress"
         android:paddingLeft="10dp" />
-
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="12dp"
-        android:paddingTop="2dp"
-        android:text="Branch"
+        android:paddingTop="30dp"
+        android:text="Enter password:"
         android:textColor="#000000"
         android:textSize="30sp"></TextView>
 
-    <Spinner
-        android:id="@+id/spinner"
+    <EditText
+        android:id="@+id/editText11"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:paddingLeft="12dp"
+        android:paddingTop="30dp"
+        android:text="Confirm Password:"
+        android:textColor="#000000"
+        android:textSize="30sp"></TextView>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="REGISTER"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+
+
 
 </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#AD1457"
+            android:text="Areas of interest"
+            android:textAlignment="center"
+
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Core"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="30dp"
+
+            />
+        <CheckBox
+            android:id="@+id/checkBox9"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Entrepreneurship"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Competitive Programming"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Web Development"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Data Science/AI/Analytics"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="UI/UX/Designing"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Finance"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+
+            />
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Consultancy"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+            />
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Other"
+            android:textSize="20sp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+            />
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="SUBMIT"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000" />
+    </LinearLayout>
+    </ScrollView>

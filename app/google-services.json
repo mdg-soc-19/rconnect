@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1030736747044",
+    "firebase_url": "https://r-connect-baeb8.firebaseio.com",
+    "project_id": "r-connect-baeb8",
+    "storage_bucket": "r-connect-baeb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030736747044:android:f581fd22094160af7716b1",
+        "android_client_info": {
+          "package_name": "com.example.r_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030736747044-ld4fj2p7k9a7gq893rhsu5rmd7gnssjn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.r_connect",
+            "certificate_hash": "f3f07f684f0613ed7817ac500a1360e1b0b623bb"
+          }
+        },
+        {
+          "client_id": "1030736747044-pftu873ksqgno9eoo0e9295d99b7nkkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDObXQcB2c4gX1KUg5bNvoEutgoXvT7xWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030736747044-pftu873ksqgno9eoo0e9295d99b7nkkj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

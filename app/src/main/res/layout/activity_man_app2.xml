@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManAppActivity"
+    android:orientation="vertical"
+    android:background="#FCE4EC">
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#AD1457"
+        android:text="Manual Approval"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"></TextView>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border2"
+    android:layout_margin="20dp"
+    android:padding="10dp"
+    android:text="Your details will be sent to admin for verification. On approval, you will receive a confirmation about the same."
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E-mail:"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:textSize="30sp"
+        android:textColor="#000000"></TextView>
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/border"
+        android:ems="10"
+        android:hint="Enter E-mail"
+        android:inputType="textEmailAddress"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:text="SUBMIT"
+        android:textColor="#000000"
+        android:textSize="25sp"/>
+</LinearLayout>
