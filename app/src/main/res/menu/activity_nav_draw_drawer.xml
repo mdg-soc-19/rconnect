@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profilee_logo"
             android:title="Your Profile" />
