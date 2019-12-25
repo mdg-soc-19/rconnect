@@ -4,34 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FCE4EC">
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="0.0dp"
-        />
+
     <TextView
         android:id="@+id/areaoi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Areas of Interest"
-        android:textSize="40sp"
+        android:text="@string/areas_of_interest"
+        android:textSize="45sp"
         android:textAlignment="center"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:textColor="#000000"></TextView>
+        android:textColor="#000000" />
+
     <TextView
         android:id="@+id/textv"
         android:background="@drawable/border"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/areaoi"></TextView>
+        android:layout_below="@+id/areaoi"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:typeface="sans"
+        android:paddingTop="5dp"
+        android:paddingLeft="12dp" />
 
     <Button
         android:id="@+id/button11"

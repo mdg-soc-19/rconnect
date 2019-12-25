@@ -53,10 +53,10 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         checkBoxmale = (CheckBox) findViewById(R.id.checkBoxM);
-        boolean checkmale = checkBoxmale.isChecked();
+        final boolean checkmale = checkBoxmale.isChecked();
         checkBoxfemale = (CheckBox) findViewById(R.id.checkBoxF);
         boolean checkfemale = checkBoxfemale.isChecked();
-        final String gender=(checkmale==true)?"FEMALE":"MALE";
+
         Spinner spinner = findViewById(R.id.spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -87,7 +87,7 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
                         mGrad.setError("Graduation year is Required.");
                         return;
                     }
-
+                    final String gender=(checkmale==true)?"MALE":"FEMALE";
 
 
                     // register the user in firebase
@@ -128,7 +128,7 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
 
     }
     public void openArea() {
-        Intent intent = new Intent(this, AreaOfInterest.class);
+        Intent intent = new Intent(this, PersonalInfo.class);
         startActivity(intent);
     }
 

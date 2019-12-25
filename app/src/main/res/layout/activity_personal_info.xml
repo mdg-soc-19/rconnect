@@ -31,21 +31,34 @@
             android:text="Add a Profile Photo"
             android:textColor="#000000"
             android:textSize="30sp"></TextView>
+
         <ImageView
-            android:id="@+id/plus"
+            android:id="@+id/pp"
+            android:layout_width="149dp"
+            android:layout_height="118dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="80dp"
             android:layout_toRightOf="@+id/add"
-            android:layout_below="@+id/per"
-            android:layout_margin="20dp"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/plus"></ImageView>
+            android:src="@drawable/image"></ImageView>
+
+        <ImageButton
+            android:id="@+id/imgbut"
+            android:layout_width="57dp"
+            android:layout_height="54dp"
+            android:layout_above="@+id/nick"
+            android:layout_marginLeft="309dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="-100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cam"></ImageButton>
+
         <TextView
             android:id="@+id/nick"
             android:layout_below="@+id/add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="13dp"
-            android:paddingTop="50dp"
+            android:layout_marginTop="100dp"
             android:text="Nickname"
             android:textColor="#000000"
             android:textSize="30sp"></TextView>
@@ -93,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:text="SUBMIT"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000" />

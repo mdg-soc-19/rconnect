@@ -11,9 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import com.example.r_connect.models.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class AreaOfInterest extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -47,29 +50,29 @@ public class AreaOfInterest extends AppCompatActivity {
         c9=(CheckBox)findViewById(R.id.checkBox9);
         final List<String> area = new ArrayList<>();
 
-        if(c1.isChecked())
-            area.add("Core");
-        if(c2.isChecked())
-            area.add("Competitive Programming");
-        if(c3.isChecked())
-            area.add("Web Development");
-        if(c4.isChecked())
-            area.add("Data Science/AI/Analytics");
-        if(c5.isChecked())
-            area.add("UI//UX/Designing");
-        if(c6.isChecked())
-            area.add("Finance");
-        if(c7.isChecked())
-            area.add("Consultancy");
-        if(c8.isChecked())
-            area.add("Other");
-        if(c9.isChecked())
-            area.add("Entrepreneurship");
+
         if (fAuth.getCurrentUser() != null) {
             aSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    if(c1.isChecked())
+                        area.add("Core");
+                    if(c2.isChecked())
+                        area.add("Competitive Programming");
+                    if(c3.isChecked())
+                        area.add("Web Development");
+                    if(c4.isChecked())
+                        area.add("Data Science/AI/Analytics");
+                    if(c5.isChecked())
+                        area.add("UI//UX/Designing");
+                    if(c6.isChecked())
+                        area.add("Finance");
+                    if(c7.isChecked())
+                        area.add("Consultancy");
+                    if(c8.isChecked())
+                        area.add("Other");
+                    if(c9.isChecked())
+                        area.add("Entrepreneurship");
 
 
                     // register the user in firebase
@@ -77,6 +80,8 @@ public class AreaOfInterest extends AppCompatActivity {
 
 
                     userID = fAuth.getCurrentUser().getUid();
+
+
                     DocumentReference documentReference = fStore.collection("users").document(userID);
                     Map<String, Object> user = new HashMap<>();
                     user.put("Area of Interest",area);

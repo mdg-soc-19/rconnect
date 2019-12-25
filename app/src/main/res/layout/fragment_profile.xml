@@ -31,48 +31,40 @@
             android:background="@drawable/border"
 
             android:text="Bio"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="12sp"></TextView>
         <TextView
             android:layout_below="@+id/bio"
-            android:id="@+id/name"
+            android:id="@+id/yname"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:layout_marginLeft="20dp"
             android:text="Your name"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textSize="28sp"></TextView>
         <TextView
-            android:layout_below="@+id/name"
+            android:layout_below="@+id/yname"
             android:id="@+id/nickn"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:layout_marginLeft="20dp"
             android:text="Nickname"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
 
         <ImageView
-            android:id="@+id/pro"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:id="@+id/proimg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/image"
+            android:layout_below="@+id/bio"
             android:layout_marginLeft="80dp"
-            android:layout_toRightOf="@+id/name"
-            android:layout_marginTop="100dp"
+            android:layout_toRightOf="@+id/yname"
             android:layout_marginRight="20dp"
            ></ImageView>
-
-        <ImageButton
-
-            android:layout_width="57dp"
-            android:layout_height="54dp"
-            android:layout_above="@+id/semail"
-            android:layout_marginLeft="300dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/cam"></ImageButton>
         <TextView
             android:layout_below="@+id/nickn"
             android:id="@+id/yemail"
@@ -80,9 +72,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Your e-mail"
+            android:paddingTop="40dp"
             android:layout_marginLeft="12dp"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="25sp"></TextView>
         <TextView
             android:layout_below="@+id/yemail"
             android:id="@+id/semail"
@@ -93,8 +86,8 @@
             android:text="E-mail"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
         <TextView
             android:layout_below="@+id/semail"
             android:id="@+id/ybranch"
@@ -104,7 +97,7 @@
             android:text="Branch"
             android:layout_marginLeft="12dp"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="25sp"></TextView>
         <TextView
             android:layout_below="@+id/ybranch"
             android:id="@+id/sbranch"
@@ -115,8 +108,8 @@
             android:text="Branch"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
         <TextView
             android:layout_below="@+id/sbranch"
             android:id="@+id/gyear"
@@ -126,7 +119,7 @@
             android:text="Graduation Year"
             android:layout_marginLeft="12dp"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="25sp"></TextView>
         <TextView
             android:layout_below="@+id/gyear"
             android:id="@+id/syear"
@@ -137,8 +130,8 @@
             android:text="Graduation year"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
         <TextView
             android:layout_below="@+id/syear"
             android:id="@+id/woe"
@@ -148,7 +141,7 @@
             android:text="Work or Experience"
             android:layout_marginLeft="12dp"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="25sp"></TextView>
         <TextView
             android:layout_below="@+id/woe"
             android:id="@+id/swoe"
@@ -159,8 +152,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:text="Work or Experience"
-            android:textColor="#90A4AE"
-            android:textSize="30sp"></TextView>
+            android:textColor="#000000"
+            android:textSize="16sp"></TextView>
 
 
     </RelativeLayout>
