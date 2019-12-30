@@ -38,19 +38,9 @@
         android:textSize="30sp"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="Seniors"
+        android:layout_centerHorizontal="true"
+        android:text="Lets Connect"
         android:textColor="#ffffff"
         android:background="@drawable/border2"/>
-    <Button
-        android:id="@+id/button12"
-        android:layout_below="@+id/textv"
-        android:layout_width="150dp"
-        android:padding="10dp"
-        android:textColor="#ffffff"
-        android:background="@drawable/border2"
-        android:layout_marginLeft="220dp"
-        android:layout_marginRight="25dp"
-        android:textSize="30sp"
-        android:layout_height="wrap_content"
-        android:text="Alumni" />
+
 </RelativeLayout>

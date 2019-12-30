@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class ProfileFragment extends Fragment {
     View root;
     TextView t;
     TextView t1,t2,t3,t4,t5,t6,t7;
-    ImageView profilepic;
+    CircleImageView profilepic;
     @Nullable
     @Override
 
@@ -84,8 +85,7 @@ public class ProfileFragment extends Fragment {
                         t6.setText(gradyear);
                         t7.setText(work);
                         Uri imgUri=Uri.parse(document.get("Imageuri").toString());
-                        profilepic.setImageURI(null);
-                        profilepic.setImageURI(imgUri);
+                        Picasso.with(getContext()).load(imgUri).into(profilepic);
                     } else {
                         Log.d("LOGGER", "No such document");
                     }

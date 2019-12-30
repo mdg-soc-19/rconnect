@@ -87,7 +87,7 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
                         mGrad.setError("Graduation year is Required.");
                         return;
                     }
-                    final String gender=(checkmale==true)?"MALE":"FEMALE";
+                    final String gender=(checkmale==true)?"FEMALE":"MALE";
 
 
                     // register the user in firebase

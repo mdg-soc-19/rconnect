@@ -40,6 +40,7 @@ import java.util.Map;
 public class PersonalInfo extends AppCompatActivity {
     EditText e1,e2;
     Button b;
+    public Uri downloadURL;
     public static final String TAG = "TAG";
     private static final int REQUEST_WRITE_PERMISSION = 786;
     ImageButton ib;
@@ -94,42 +95,57 @@ public class PersonalInfo extends AppCompatActivity {
                             imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
-                                    UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder().setDisplayName(nname)
-                                            .setPhotoUri(uri).build();
-
-                                    currentUser.updateProfile(profileUpdate).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    downloadURL=uri;
+                                    Log.i("URL", uri.toString());
+                                    DocumentReference documentReference = fStore.collection("users").document(userID);
+                                    Map<String, Object> user = new HashMap<>();
+                                    user.put("Nickname", nname);
+                                    user.put("Description",text);
+                                    user.put("Imageuri",downloadURL.toString());
+                                    documentReference.update(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
+                                            if(task.isSuccessful())
+                                            {
+                                                StorageReference mStorage = FirebaseStorage.getInstance().getReference().child(userID);
+                                                final StorageReference imageFilePath = mStorage.child(pickedImgUri.getLastPathSegment());
+                                                imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                                    @Override
+                                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                                            if (task.isSuccessful()) {
+                                                        imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                            @Override
+                                                            public void onSuccess(Uri uri) {
+                                                                UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder().setDisplayName(nname)
+                                                                        .setPhotoUri(uri).build();
 
+                                                                currentUser.updateProfile(profileUpdate).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+
+                                                                        if (task.isSuccessful()) {
+                                                                            startActivity(new Intent(PersonalInfo.this, AreaOfInterest.class));
+                                                                        }
+
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        });
+
+
+                                                    }
+                                                });
                                             }
-
-
                                         }
                                     });
+
 
                                 }
                             });
                         }
                     });
-                    DocumentReference documentReference = fStore.collection("users").document(userID);
-                    Map<String, Object> user = new HashMap<>();
-                    user.put("Nickname", nname);
-                    user.put("Description",text);
-                    user.put("Imageuri",ig);
-                    documentReference.update(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Log.d(TAG, "onSuccess: user Profile is created for " + userID);
-                            startActivity(new Intent(PersonalInfo.this, AreaOfInterest.class));
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.d(TAG, "onFailure: " + e.toString());
-                        }
-                    });
+
 
                 }
             });

@@ -1,10 +1,12 @@
 package com.example.r_connect.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -13,7 +15,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.r_connect.NavDraw;
+import com.example.r_connect.People;
 import com.example.r_connect.R;
+import com.example.r_connect.Work;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +34,7 @@ public class HomeFragment extends Fragment {
     String userID;
     View root;
     TextView t;
+    Button bt;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -36,7 +42,14 @@ public class HomeFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_home, container, false);
         fStore = FirebaseFirestore.getInstance();
         t = root.findViewById(R.id.textv);
-        userID = fAuth.getCurrentUser().getUid();
+        bt=root.findViewById(R.id.button11);
+        bt.setOnClickListener(new View.OnClickListener() {
+                                  @Override
+                                  public void onClick(View v) {
+                                      startActivity(new Intent(getActivity(), People.class));
+                                  }
+                              });
+                userID = fAuth.getCurrentUser().getUid();
         DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override

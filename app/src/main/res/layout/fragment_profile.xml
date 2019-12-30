@@ -55,7 +55,8 @@
             android:textColor="#000000"
             android:textSize="20sp"></TextView>
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/proimg"
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -64,7 +65,9 @@
             android:layout_marginLeft="80dp"
             android:layout_toRightOf="@+id/yname"
             android:layout_marginRight="20dp"
-           ></ImageView>
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+           ></de.hdodenhof.circleimageview.CircleImageView>
         <TextView
             android:layout_below="@+id/nickn"
             android:id="@+id/yemail"

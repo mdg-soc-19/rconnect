@@ -46,6 +46,8 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     String userID;
+    TextView navUserName;
+    ImageView navUserPhoto;
     FirebaseUser currentUser;
     DrawerLayout drawer;
 
@@ -82,8 +84,8 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
         navigationView.setNavigationItemSelectedListener(this);
 
         View headerView = navigationView.getHeaderView(0);
-        final TextView navUserName = headerView.findViewById(R.id.nav_username);
-        final ImageView navUserPhoto = headerView.findViewById(R.id.nav_user_photo);
+        navUserName = headerView.findViewById(R.id.nav_username);
+        navUserPhoto = headerView.findViewById(R.id.nav_user_photo);
         userID = mAuth.getCurrentUser().getUid();
         DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -92,10 +94,11 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document != null) {
-                        navUserName.setText(document.get("Name").toString());
+                        String name= document.get("Name").toString();
+                        navUserName.setText(name);
                         Uri imgUri = Uri.parse(document.get("Imageuri").toString());
-                        Glide.with(getApplicationContext()).load(imgUri).into(navUserPhoto);
-
+                        navUserPhoto.setImageURI(null);
+                        navUserPhoto.setImageURI(imgUri);
                     } else {
                         Log.d("LOGGER", "No such document");
                     }

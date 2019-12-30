@@ -14,17 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".People"></activity>
         <activity
             android:name=".NavDraw"
             android:label="@string/title_activity_nav_draw"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".menu" />
         <activity android:name=".Central" />
         <activity android:name=".Work" />
         <activity android:name=".AreaOfInterest" />
         <activity android:name=".Details" />
         <activity android:name=".Content" />
-        <activity android:name=".PersonalInfo"/>
+        <activity android:name=".PersonalInfo" />
         <activity android:name=".PasswordActivitry" />
         <activity android:name=".ManAppActivity" />
         <activity android:name=".VerifyActivity" />

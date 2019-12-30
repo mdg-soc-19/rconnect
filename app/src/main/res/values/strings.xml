@@ -1,23 +1,23 @@
 <resources>
     <string name="app_name">R-Connect</string>
     <string-array name="numbers">
-        <item>Bio Technology (4 Years, Bachelor of Technology)</item>
-        <item>Chemical Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Civil Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Computer Science and Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Electrical Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Electronics and Communication Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Engineering Physics (4 Years, Bachelor of Technology)</item>
-        <item>Mechanical Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Metallurgical and Materials Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Polymer Science and Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Production and Industrial Engineering (4 Years, Bachelor of Technology)</item>
-        <item>Architecture (5 Years, Bachelor of Architecture)</item>
-        <item>Geological Technology (5 Years, Integrated Master of Technology)</item>
-        <item>Geophysical Technology (5 Years, Integrated Master of Technology)</item>
-        <item>Applied Mathematics (5 Years, Integrated Master of Science)</item>
-        <item>Chemistry (5 Years, Integrated Master of Science)</item>
-        <item>Physics (5 Years, Integrated Master of Science)</item>
+        <item>BioTech</item>
+        <item>Chemical</item>
+        <item>Civil</item>
+        <item>CSE</item>
+        <item>Electrical</item>
+        <item>ECE</item>
+        <item>EPH</item>
+        <item>Mechanical</item>
+        <item>Metallurgy</item>
+        <item>Polymer</item>
+        <item>Production and Industrial</item>
+        <item>Architecture(5 Years)</item>
+        <item>GT(5 Years)</item>
+        <item>GPT(5 Years)</item>
+        <item>MSM(5 Years)</item>
+        <item>MSc Chemistry(5 Years)</item>
+        <item>MSP(5 Years)</item>
     </string-array>
     <string name="title_activity_nav_draw">NavDraw</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
