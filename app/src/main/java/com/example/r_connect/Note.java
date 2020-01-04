@@ -5,7 +5,7 @@ import com.google.firebase.firestore.PropertyName;
 import java.util.List;
 
 public class Note {
-    String name,branch,year,image;
+    String name,branch,year,image,userid;
     List<String> areaofin;
 
     @PropertyName("Name")
@@ -48,6 +48,15 @@ public class Note {
     public String getYear() {
         return year;
     }
+    @PropertyName("userid")
+    public String getUserid() {
+        return userid;
+    }
+    @PropertyName("userid")
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
     @PropertyName("Imageuri")
     public String getImageuri() {
         return image;
@@ -56,12 +65,13 @@ public class Note {
     public Note() {
         //empty constructor needed
     }
-    public Note(String name, String branch, List<String> areaofin, String year, String image)
+    public Note(String name, String branch, List<String> areaofin, String year, String image, String userid)
     {
         this.name=name;
         this.branch=branch;
         this.areaofin=areaofin;
         this.year=year;
         this.image=image;
+        this.userid=userid;
     }
 }

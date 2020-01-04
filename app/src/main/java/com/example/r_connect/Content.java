@@ -9,6 +9,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,6 +20,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,8 +39,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
 
-public class Content extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Content extends AppCompatActivity {
     private static final String CURRENT_USER_KEY = "CURRENT_USER_KEY";
     private static final String CURRENT_USER_NAME = "CURRENT_USER_NAME";
     private static final String CURRENT_USER_IMAGE = "CURRENT_USER_IMAGE";
@@ -50,43 +56,34 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
     ImageView navUserPhoto;
     FirebaseUser currentUser;
     DrawerLayout drawer;
+    private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_nav_draw);
+        setContentView(R.layout.activity_nav_draw);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
         drawer = findViewById(R.id.drawer_layout);
-        SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-            /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putString(CURRENT_USER_KEY, currentUser.getUid());
-            editor.putString(CURRENT_USER_NAME, currentUser.getDisplayName());
-            editor.putString(CURRENT_USER_IMAGE, String.valueOf(currentUser.getPhotoUrl()));
-            editor.apply();*/
-
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_profile, R.id.nav_connection)
+                .setDrawerLayout(drawer)
+                .build();
         fStore = FirebaseFirestore.getInstance();
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle
-                (this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         View headerView = navigationView.getHeaderView(0);
+
         navUserName = headerView.findViewById(R.id.nav_username);
         navUserPhoto = headerView.findViewById(R.id.nav_user_photo);
         userID = mAuth.getCurrentUser().getUid();
+        Log.d("Logger","Hello");
         DocumentReference documentReference = fStore.collection("users").document(userID);
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -96,9 +93,8 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
                     if (document != null) {
                         String name= document.get("Name").toString();
                         navUserName.setText(name);
-                        Uri imgUri = Uri.parse(document.get("Imageuri").toString());
-                        navUserPhoto.setImageURI(null);
-                        navUserPhoto.setImageURI(imgUri);
+                        Uri imgUri=Uri.parse(document.get("Imageuri").toString());
+                        Picasso.with(Content.this).load(imgUri).into(navUserPhoto);
                     } else {
                         Log.d("LOGGER", "No such document");
                     }
@@ -108,17 +104,12 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
             }
         });
 
-        getSupportActionBar().setTitle("R-Connect");
-        fragment = new HomeFragment();
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-        fragmentTransaction.commit();
-
-
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-
+/*
     @Override
     public void onBackPressed() {
         drawer = findViewById(R.id.drawer_layout);
@@ -176,5 +167,18 @@ public class Content extends AppCompatActivity implements NavigationView.OnNavig
         return true;
 
     }
+*/
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    // Inflate the menu; this adds items to the action bar if it is present.
+    getMenuInflater().inflate(R.menu.nav_draw, menu);
+    return true;
+}
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                || super.onSupportNavigateUp();
+    }
 }

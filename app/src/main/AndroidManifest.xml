@@ -24,8 +24,8 @@
         <activity android:name=".Work" />
         <activity android:name=".AreaOfInterest" />
         <activity android:name=".Details" />
-        <activity android:name=".Content" />
         <activity android:name=".PersonalInfo" />
+        <activity android:name=".Profile" />
         <activity android:name=".PasswordActivitry" />
         <activity android:name=".ManAppActivity" />
         <activity android:name=".VerifyActivity" />

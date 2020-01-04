@@ -1,0 +1,163 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/yourp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#AD1457"
+            android:text="Your profile"
+            android:textAlignment="center"
+
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"></TextView>
+
+        <TextView
+            android:layout_below="@+id/yourp"
+            android:id="@+id/bio"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+
+            android:text="Bio"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:textSize="12sp"></TextView>
+        <TextView
+            android:layout_below="@+id/bio"
+            android:id="@+id/yname"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginLeft="20dp"
+            android:text="Your name"
+            android:textColor="#000000"
+            android:textSize="28sp"></TextView>
+        <TextView
+            android:layout_below="@+id/yname"
+            android:id="@+id/nickn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginLeft="20dp"
+            android:text="Nickname"
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/proimg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/image"
+            android:layout_below="@+id/bio"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/yname"
+            android:layout_marginRight="20dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:layout_below="@+id/nickn"
+            android:id="@+id/yemail"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your e-mail"
+            android:paddingTop="40dp"
+            android:layout_marginLeft="12dp"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+        <TextView
+            android:layout_below="@+id/yemail"
+            android:id="@+id/semail"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="E-mail"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
+        <TextView
+            android:layout_below="@+id/semail"
+            android:id="@+id/ybranch"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Branch"
+            android:layout_marginLeft="12dp"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+        <TextView
+            android:layout_below="@+id/ybranch"
+            android:id="@+id/sbranch"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Branch"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
+        <TextView
+            android:layout_below="@+id/sbranch"
+            android:id="@+id/gyear"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Graduation Year"
+            android:layout_marginLeft="12dp"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+        <TextView
+            android:layout_below="@+id/gyear"
+            android:id="@+id/syear"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Graduation year"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000000"
+            android:textSize="20sp"></TextView>
+        <TextView
+            android:layout_below="@+id/syear"
+            android:id="@+id/woe"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Work or Experience"
+            android:layout_marginLeft="12dp"
+            android:textColor="#000000"
+            android:textSize="25sp"></TextView>
+        <TextView
+            android:layout_below="@+id/woe"
+            android:id="@+id/swoe"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Work or Experience"
+            android:textColor="#000000"
+            android:textSize="16sp"></TextView>
+
+
+    </RelativeLayout>
+</ScrollView>
