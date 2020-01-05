@@ -15,9 +15,5 @@
             android:id="@+id/nav_connection"
             android:icon="@drawable/ic_connection_logo"
             android:title="View Connections" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_logout_logo"
-            android:title="Logout" />
 
 </menu>
