@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Models and Robotics Section"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/mars"></ImageView>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This section is a perfect place for all the robot enthusiasts\n"
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_below="@id/pag"></TextView>
+        <TextView
+            android:id="@+id/acti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro"
+            android:text="             There is a saying – \n   “Think beyond your thoughts.”\nThis is the place where one can actually get the feeling of ‘T’ in “IIT”!"
+            android:layout_centerInParent="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="\nThe Models and Robotics Section has been a part of Hobbies Club, IIT Roorkee since the origination of Hobbies Club. This section provides a perfect platform for students to develop their innovative and technical skills such as mechanical, electronics and architectural. This section is a perfect place for transforming his/her imagination into reality.
+The section has a variety of machinery that is required for the construction of models both static and dynamic.\n\nAlso,here first yearites get a chance to build their bots independently.\nThese bots are then displayed in “Srishti” – the Annual Exhibition of Hobbies Club, and get a lot of appreciation from various professors, and other visitors."></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:padding="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Over the past few years, this section has focused
+            \nmore on the ‘robotics’ part, conducting lectures
+            \nand workshop on microcontrollers,sensors,
+            \nactuators,etc."
+            android:textSize="15sp"></TextView>
+    </RelativeLayout>
+</ScrollView>

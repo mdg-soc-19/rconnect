@@ -1,0 +1,71 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Institute Alumni Relations Cell (IARC)"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/iarc"
+            android:layout_centerHorizontal="true"></ImageView>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="It is the student body working under the Dean of Resources and Alumni Affairs (DORA), IIT Roorkee for strengthening of the alumni-institute relationship."
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_below="@id/pag"></TextView>
+        <TextView
+            android:id="@+id/acti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro"
+            android:text="\nTo bridge the gap between alumni and the institute through their active involvement and support and to make the alumni-institute relationship mutually beneficial."
+            android:layout_centerInParent="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="\nThe vision of the cell is to make our alumni feel more connected to their alma mater through their active involvement and support.
+            \nTeam publishes newsletter-Verband to update alumni with very news related to their alma mater.
+            \nIARC has started publishing Giving Back Report which give detailed analysis of every expenditure of alumni donation.
+            \nTo foster the bond of alumni and institute, IARC in association with Cinesec,IITR and Choreography and Dance section IITR, started Class Song- https://www.youtube.com/watch?v=EUei7-LIP7c.
+            \nTeam is working under DORA office in various verticals from donations to alumni meet."></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:padding="15dp"
+            android:text="Our website-https://alumni.iitr.ac.in/"></TextView>
+
+    </RelativeLayout>
+</ScrollView>

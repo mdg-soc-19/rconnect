@@ -64,7 +64,7 @@ public class AreaOfInterest extends AppCompatActivity {
                     if(c4.isChecked())
                         area.add("Data Science/AI/Analytics");
                     if(c5.isChecked())
-                        area.add("UI//UX/Designing");
+                        area.add("UI/UX/Designing");
                     if(c6.isChecked())
                         area.add("Finance");
                     if(c7.isChecked())

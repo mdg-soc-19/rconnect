@@ -1,0 +1,222 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Mobile Development Group, IITR"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/mdg"></ImageView>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We are a bunch of enthusiatic students who aim to foster mobile development activites in the campus."
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_below="@id/pag"></TextView>
+        <TextView
+            android:id="@+id/acti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro"
+            android:text="A place where ideas meet reality!\nWe at MDG create products to make experience of people at IITR easy."
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:padding="15dp"
+            android:text="Our Apps:-"
+            android:textSize="28dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/appetizer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Appetizer"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/aboutappe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appetizer"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+        android:text="The Appetizer app brings the best of mess experience to your mobile devices with real-time notifications, display of mess menu and a feature which let’s you skip any meal which you are not excited about.
+        \n"
+            android:textSize="20dp"
+            ></TextView>
+        <TextView
+        android:id="@+id/musicdna"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/aboutappe"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Music DNA"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/aboutmusic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/musicdna"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="MusicDNA is a full featured Music Player that combines the usefulness of a clean traditional music player with ···amazing visualizations or DNAs generated based on the currently playing music.\n"
+            android:textSize="20dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/campusbuddy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutmusic"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Campus Buddy"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/aboutcampus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/campusbuddy"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Campus Buddy is an assistant who helps you search Telephone Directory of IIT Roorkee and keeps you updated with the facebook feed of campus groups at IIT Roorkee."
+            android:textSize="20dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/splitter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutcampus"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Splitter"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/aboutsplitter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/splitter"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="It is a simple mobile platform (currently only Android) 2D game, where aim is to just avoid the spikes and climb higher to reach out of tunnel."
+            android:textSize="20dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/teded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutsplitter"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="TEDx IIT Roorkee"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/aboutteded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/teded"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="An app for the anual event organised at IIT Roorkee aimed at fostering entrepreneurship."
+            android:textSize="20dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/lib"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutteded"
+            android:padding="15dp"
+            android:text="Our Libraries:-"
+            android:textSize="28dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/aboutlib"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lib"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="EmojiReactionView\nRotating-Text\nVectorMaster\nGraph Kit\nAnimated text Kit\nAttachable Floating Menu\n"
+            android:textSize="20dp"
+            ></TextView>
+        <TextView
+            android:id="@+id/activ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutlib"
+            android:padding="15dp"
+            android:text="Activities"
+            android:textSize="28dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/what"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/activ"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Conduct Android Development Lectures and interactive workshops.
+            \nConduct Season of Code in the winters
+            \nConduct Droid Wars.
+            \nGuide the students through Blogs on medium.com
+            \nReleasing a new flutter package
+            \nOur truly cross-platform Flutter library, inspired by Google's library scrollytell-ScrollyTell Flutter.
+            \nGuiding beginners to their journey of GSoC
+            \n\nIt's a matter of pride for the Mobile Development Group that MDG Members are increasingly getting selected in Google Summer of Code.
+            \nGSoC is a global open source software development program for students;)\n"
+            android:textSize="20dp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/what"
+            android:padding="15dp"
+            android:text="We love new friends
+            \nGround floor,SAC Building, IIT Roorkee,Roorkee, Uttarakhand, India - 247667"
+            android:textSize="20dp"></TextView>
+
+    </RelativeLayout>
+</ScrollView>

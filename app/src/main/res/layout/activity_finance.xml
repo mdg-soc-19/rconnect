@@ -1,0 +1,72 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Finance Club"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/finance"
+            android:layout_centerHorizontal="true"></ImageView>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="   A group to collaborate among
+            \n   finance enthusiasts and foster
+            \n   a permanent finance culture in\n              the IITR campus."
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_below="@id/pag"></TextView>
+        <TextView
+            android:id="@+id/acti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro"
+            android:text="It aims to provide the guidance required to pursue a career in finance. "
+            android:layout_centerInParent="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="\nThe switch from engineering to finance is full of roadblocks, so you have to keep patience and just stay on course. Mathematics (especially stats and probability) is going to be your biggest strength.
+            \nFinance is a lot about reading.\nFind and study the practical application of the major topics.\nFollow the news — business as well as political.
+            \nFinance is a lot about networking.\nDo projects and try to attend conferences.\nIt is one of the most demanding professions, because the stake is a lot of money."></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:padding="15dp"
+            android:text="All the best for your journey in Finance.Just remember-
+            \n&quot;Money is not everything but its right next to everything.&quot;"></TextView>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Data Science Group"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/data"></ImageView>
+        <TextView
+            android:id="@+id/acti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pag"
+            android:text="As a part of SDS, this group aims at improving the culture of Data Science and Machine Learning in IITR.
+
+ML | DL | RL | Analytics
+Code. Train. Predict.\n\nWhat we study"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:padding="15dp"
+            android:text="Probability and Statistics\nMachine Learning(ML)\nDeep Learning(DL)\nLinear Algebra"
+            android:textSize="25sp"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:padding="15dp"
+            android:text="Come and become a part of our family!"
+            android:textSize="20dp"></TextView>
+    </RelativeLayout>
+</ScrollView>

@@ -1,5 +1,6 @@
 package com.example.r_connect;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,7 @@ public class ProfileFragment extends Fragment {
     TextView t;
     TextView t1,t2,t3,t4,t5,t6,t7;
     CircleImageView profilepic;
+    ImageView update;
     @Nullable
     @Override
 
@@ -52,6 +54,13 @@ public class ProfileFragment extends Fragment {
         t5=root.findViewById(R.id.sbranch);
         t6=root.findViewById(R.id.syear);
         t7=root.findViewById(R.id.swoe);
+        update=root.findViewById(R.id.change2);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Work2.class));
+            }
+        });
         profilepic=root.findViewById(R.id.proimg);
         userID = fAuth.getCurrentUser().getUid();
         DocumentReference documentReference = fStore.collection("users").document(userID);

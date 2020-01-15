@@ -21,9 +21,8 @@
         android:label="Your Connections"
         tools:layout="@layout/fragment_connection" />
     <fragment
-        android:id="@+id/nav_logout"
-        android:name=""
-        android:label="Your Connections"
-        tools:layout="@layout/fragment_connection" />
-
+        android:id="@+id/nav_groups"
+        android:name="com.example.r_connect.groups"
+        android:label="Campus Groups"
+        tools:layout="@layout/fragment_groups" />
     </navigation>

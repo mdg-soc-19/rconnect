@@ -14,7 +14,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".People"></activity>
+        <activity android:name=".Work2"></activity>
+        <activity android:name=".AreaofInterest2" />
+        <activity android:name=".MDG" />
+        <activity android:name=".iarc" />
+        <activity android:name=".ecell" />
+        <activity android:name=".finance" />
+        <activity android:name=".watchout" />
+        <activity android:name=".geek" />
+        <activity android:name=".mars" />
+        <activity android:name=".robocon" />
+        <activity android:name=".IMG" />
+        <activity android:name=".DSG" />
+        <activity android:name=".infosec" />
+        <activity android:name=".labs" />
+        <activity android:name=".pag" />
+        <activity android:name=".sds" />
+        <activity android:name=".People" />
         <activity
             android:name=".NavDraw"
             android:label="@string/title_activity_nav_draw"

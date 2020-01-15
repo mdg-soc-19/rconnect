@@ -1,0 +1,65 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Programming and Algorithms Group"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/pag"></ImageView>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We strive to nurture the competitive coding culture of IIT Roorkee. As a bunch of students, we are enthusiastic about programming and we love it."
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_below="@id/pag"></TextView>
+<TextView
+    android:id="@+id/acti"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/intro"
+    android:text="                      Activities\nYou ask what else do we do other than programming?"
+    android:layout_centerInParent="true"
+    android:padding="15dp"
+    android:textSize="25dp"
+    android:textColor="#000000"
+    android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:padding="15dp"
+            android:text="Conduct CodeBlitz - the intra-campus programming competition.\n\nOpen lectures
+(From Sorting and searching to FFT)\n\nOrganize programming competitions like Insomnia CodeBlitz
+(Insomnia is conducted over the internet and witnesses international participation, even from Red Coders)\n\nWeekly Problems" android:textSize="20dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:padding="15dp"
+            android:text="Our Blog\nhttp://pag.iitr.ac.in/blog/\n"
+            android:textSize="20dp"></TextView>
+    </RelativeLayout>
+</ScrollView>

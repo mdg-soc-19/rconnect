@@ -157,6 +157,16 @@
             android:text="Work or Experience"
             android:textColor="#000000"
             android:textSize="16sp"></TextView>
+        <ImageView
+            android:id="@+id/change2"
+            android:layout_width="44dp"
+            android:layout_height="34dp"
+            android:layout_below="@+id/woe"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+
+            android:layout_marginEnd="19dp"
+            android:src="@drawable/ic_mode_edit_black_24dp"></ImageView>
 
 
     </RelativeLayout>

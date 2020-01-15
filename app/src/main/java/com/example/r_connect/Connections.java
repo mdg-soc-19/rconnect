@@ -62,7 +62,7 @@ public class Connections extends Fragment {
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
-                    if (document != null) {
+                    if (document != null&&!State.area.isEmpty()) {
                         group= (List<String>) document.get("Connection");
                         Log.d("LOGGER", group.toString());
 
@@ -94,13 +94,14 @@ public class Connections extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        if(!State.area.isEmpty()){
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 setUpRecyclerView();
                 adapter.startListening();
             }
-        }, 4000);
+        }, 4000);}
 
 
 
@@ -109,7 +110,8 @@ public class Connections extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+        if(!State.area.isEmpty()){
         adapter.stopListening();
-    }
+    }}
 }
 

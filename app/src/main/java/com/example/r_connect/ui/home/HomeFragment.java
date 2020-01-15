@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.r_connect.AreaofInterest2;
 import com.example.r_connect.NavDraw;
 import com.example.r_connect.People;
 import com.example.r_connect.R;
@@ -35,6 +37,7 @@ public class HomeFragment extends Fragment {
     View root;
     TextView t;
     Button bt;
+    ImageView update;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +46,13 @@ public class HomeFragment extends Fragment {
         fStore = FirebaseFirestore.getInstance();
         t = root.findViewById(R.id.textv);
         bt=root.findViewById(R.id.button11);
+        update=root.findViewById(R.id.change);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AreaofInterest2.class));
+            }
+        });
         bt.setOnClickListener(new View.OnClickListener() {
                                   @Override
                                   public void onClick(View v) {

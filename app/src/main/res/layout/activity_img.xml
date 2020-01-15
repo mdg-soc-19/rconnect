@@ -1,0 +1,66 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#47c639"
+            android:text="Information Management Group"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"></TextView>
+        <ImageView
+            android:id="@+id/pag"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/per"
+            android:layout_height="200dp"
+            android:src="@drawable/img"></ImageView>
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We are a group of students who try to make the digital stay of people at IITR as comfortable as possible."
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_below="@id/pag"></TextView>
+        <TextView
+            android:id="@+id/acti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intro"
+            android:text="To set up a robust and effective information base in IIT Roorkee."
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/acti"
+            android:padding="15dp"
+            android:text="The Information Management Group, (IMG), is called so, because by concept, it works on various programs related to the intellectual and managerial application in diversified disciplines.\nAt IMG, we strive to lead in the invention, development and maintenance of advanced information technologies, including computer systems, software and database systems. We translate these advanced technologies into the assets of IIT Roorkee, through our professional solutions, and services.\nThe team strongly believes in innovation, technology and networking. Strong linkages with academia, workplace professionalism, and in-house training and learning have helped IMG lay the foundation for growing into a big organization. As our intellectual horizons enlarged to understand better and address the opportunities of the IT era, we grew in several directions.
+
+\nOur work has spanned a range of activities, from strategy consulting and system integration services to offshore development centers for some of the most sophisticated software development in the world."
+            ></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about"
+            android:padding="15dp"
+            android:text="Contact Us:-\nGround floor, Institute Computer Centre,
+        IIT Roorkee, Roorkee,Uttrakhand,India- 247667\nE-mail:img@iitr.ac.in"
+            android:textSize="20dp"></TextView>
+    </RelativeLayout>
+</ScrollView>
