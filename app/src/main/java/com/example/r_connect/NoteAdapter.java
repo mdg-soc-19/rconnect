@@ -35,15 +35,6 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
     private Context context;
     CircleImageView ppic;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    /*private OnItemClickListener mListener;
-
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        mListener = listener;
-    }*/
     public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context mcontext,Context context) {
         super(options);
         this.mcontext = mcontext;
@@ -120,17 +111,6 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
             image= itemView.findViewById(R.id.connect);
             ppic=itemView.findViewById(R.id.cpic);
             parentLayout = itemView.findViewById(R.id.parent_layout);
-            /*itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (listener != null) {
-                        int position = getAdapterPosition();
-                        if (position != RecyclerView.NO_POSITION) {
-                            listener.onItemClick(position);
-                        }
-                    }
-                }
-            });*/
         }
     }
 }

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,6 +26,7 @@ public class AreaofInterest2 extends AppCompatActivity {
     public static final String TAG = "TAG";
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9;
     Button aSubmit;
+    ProgressBar progressBar2;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -35,6 +37,7 @@ public class AreaofInterest2 extends AppCompatActivity {
         aSubmit = findViewById(R.id.button34o);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        progressBar2 = findViewById(R.id.progressBar2);
         c1=(CheckBox)findViewById(R.id.checkBox1o);
         c2=(CheckBox)findViewById(R.id.checkBox2o);
         c3=(CheckBox)findViewById(R.id.checkBox3o);
@@ -51,6 +54,7 @@ public class AreaofInterest2 extends AppCompatActivity {
             aSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    progressBar2.setVisibility(View.VISIBLE);
                     if(c1.isChecked())
                         area.add("Core");
                     if(c2.isChecked())

@@ -18,39 +18,27 @@
             android:paddingTop="5dp"
             android:text="Work or Experience"
             android:textAlignment="center"
-
             android:textColor="#FFFFFF"
-            android:textSize="35sp"></TextView>
+            android:textSize="30sp"></TextView>
         <CheckBox
             android:id="@+id/checkBoxS"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="45dp"
             android:text="Student"
-            android:textSize="28sp"
+            android:textSize="20sp"
             android:background="@drawable/border"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             />
         <CheckBox
-            android:id="@+id/checkBoxFre"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:text="Fresher"
-            android:textSize="28sp"
-            android:background="@drawable/border"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            />
-        <CheckBox
             android:id="@+id/checkBoxG"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="45dp"
             android:text="Graduated"
-            android:textSize="28sp"
+            android:textSize="20sp"
             android:background="@drawable/border"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             />
@@ -61,14 +49,13 @@
             android:paddingTop="25dp"
             android:text="Campus Groups"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="20sp"></TextView>
 
         <EditText
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/border"
             android:ems="10"
@@ -82,14 +69,13 @@
             android:paddingTop="25dp"
             android:text="Internship"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="20sp"></TextView>
 
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/border"
             android:ems="10"
@@ -103,14 +89,13 @@
             android:paddingTop="25dp"
             android:text="Current work"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="20sp"></TextView>
 
         <EditText
             android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/border"
             android:ems="10"
@@ -124,6 +109,14 @@
             android:layout_gravity="center"
             android:layout_marginTop="35dp"
             android:text="Submit"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
     </LinearLayout>
 </ScrollView>

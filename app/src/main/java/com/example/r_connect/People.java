@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,6 +35,7 @@ public class People extends AppCompatActivity {
     private CollectionReference notebookRef = db.collection("users");
     private Context mcontext;
     private NoteAdapter adapter;
+    ProgressBar progressBar4;
     FirebaseAuth fAuth;
     Query query;
     String userID;
@@ -43,6 +46,7 @@ public class People extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        progressBar4 = findViewById(R.id.progressBar4);
         setContentView(R.layout.activity_people);
         fAuth = FirebaseAuth.getInstance();
         userID = fAuth.getCurrentUser().getUid();
@@ -52,6 +56,7 @@ public class People extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
+                    //progressBar4.setVisibility(View.VISIBLE);
                     DocumentSnapshot document = task.getResult();
                     if (document != null) {
                         group= (List<String>) document.get("Area of Interest");
@@ -71,7 +76,6 @@ public class People extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 setUpRecyclerView();
             }
         }, 2000);
@@ -101,7 +105,6 @@ public class People extends AppCompatActivity {
                 adapter.startListening();
             }
         }, 4000);
-
     }
 
     @Override

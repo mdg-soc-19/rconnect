@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCE4EC"
+    tools:context=".SplashActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="300dp"
+        android:id="@+id/imaa"
+        android:layout_marginTop="255dp"
+        android:layout_marginLeft="55dp"
+        android:layout_height="180dp"
+        android:src="@drawable/hello" />
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="72dp"
+            android:layout_below="@+id/imaa"
+            android:text="Welcome to R-Connect"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <ProgressBar
+            android:id="@+id/splashProgress"
+            android:layout_below="@+id/welcome"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="125dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:layout_below="@+id/welcome">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="98dp"
+            android:text="MADE WITH"
+            android:textSize="15sp"
+            android:textColor="#000000">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/text"
+            android:src="@drawable/love">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BY-DIVYANSH"
+            android:layout_toRightOf="@+id/img"
+            android:textSize="15sp"
+            android:textColor="#000000"></TextView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

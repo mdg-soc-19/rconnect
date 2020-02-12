@@ -40,7 +40,7 @@ public class Note {
     public String getAreaofin() {
         String s="";
         for(int i=0;i<areaofin.size();i++)
-            s=s+areaofin.get(i)+" ";
+            s=s+areaofin.get(i)+",";
 
         return s;
     }

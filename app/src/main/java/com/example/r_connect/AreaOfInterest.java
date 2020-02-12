@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ProgressBar;
 
 import com.example.r_connect.models.User;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,6 +29,7 @@ import java.util.Objects;
 public class AreaOfInterest extends AppCompatActivity {
     public static final String TAG = "TAG";
     CheckBox c1,c2,c3,c4,c5,c6,c7,c8,c9;
+    ProgressBar progressBar;
     Button aSubmit;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -37,6 +39,7 @@ public class AreaOfInterest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_of_interest);
         aSubmit = findViewById(R.id.button34);
+        progressBar = findViewById(R.id.progressBar);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         c1=(CheckBox)findViewById(R.id.checkBox1);
@@ -52,9 +55,11 @@ public class AreaOfInterest extends AppCompatActivity {
 
 
         if (fAuth.getCurrentUser() != null) {
+
             aSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    progressBar.setVisibility(View.VISIBLE);
                     if(c1.isChecked())
                         area.add("Core");
                     if(c2.isChecked())

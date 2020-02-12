@@ -5,22 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".People"
-    android:background="#FCE4EC">
+    android:background="#616161">
     <TextView
         android:id="@+id/head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#AD1457"
+        android:padding="5dp"
         android:text="Let's Connect"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="45sp"></TextView>
+        android:textSize="30sp"></TextView>
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        android:layout_below="@+id/head"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:paddingTop="20dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle"
         android:layout_below="@+id/head"
-        android:layout_marginTop="12dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 

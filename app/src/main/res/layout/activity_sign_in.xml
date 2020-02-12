@@ -12,9 +12,9 @@
         android:background="#AD1457"
         android:text="Sign in"
         android:textAlignment="center"
-
+        android:padding="5dp"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"></TextView>
+        android:textSize="30sp"></TextView>
 
     <TextView
         android:layout_width="match_parent"
@@ -23,14 +23,14 @@
         android:paddingTop="80dp"
         android:text="E-mail:"
         android:textColor="#000000"
-        android:textSize="40sp"></TextView>
+        android:textSize="20sp"></TextView>
 
     <EditText
         android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/border"
         android:ems="10"
@@ -45,14 +45,14 @@
         android:paddingTop="30dp"
         android:text="Password:"
         android:textColor="#000000"
-        android:textSize="40sp"></TextView>
+        android:textSize="20sp"></TextView>
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/border"
         android:ems="10"
@@ -66,8 +66,8 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_marginTop="35dp"
-    android:text="Sign In"
-    android:textSize="25sp" />
+    android:text="Sign in"
+    android:textSize="15sp" />
 
     <ProgressBar
         android:id="@+id/progressBar"

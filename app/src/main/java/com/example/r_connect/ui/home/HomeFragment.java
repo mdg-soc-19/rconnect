@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -34,6 +35,7 @@ public class HomeFragment extends Fragment {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
+    ProgressBar progressBar1;
     View root;
     TextView t;
     Button bt;
@@ -44,18 +46,21 @@ public class HomeFragment extends Fragment {
         fAuth = FirebaseAuth.getInstance();
         root = inflater.inflate(R.layout.fragment_home, container, false);
         fStore = FirebaseFirestore.getInstance();
+        progressBar1 = root.findViewById(R.id.progressBar1);
         t = root.findViewById(R.id.textv);
         bt=root.findViewById(R.id.button11);
         update=root.findViewById(R.id.change);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar1.setVisibility(View.VISIBLE);
                 startActivity(new Intent(getActivity(), AreaofInterest2.class));
             }
         });
         bt.setOnClickListener(new View.OnClickListener() {
                                   @Override
                                   public void onClick(View v) {
+                                      progressBar1.setVisibility(View.VISIBLE);
                                       startActivity(new Intent(getActivity(), People.class));
                                   }
                               });

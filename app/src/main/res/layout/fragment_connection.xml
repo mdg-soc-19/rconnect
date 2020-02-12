@@ -11,24 +11,20 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FCE4EC"
+        android:background="#424242"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="#07b892"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
+            android:layout_gravity="center"
+            android:background="#AD1457"
+            android:padding="5dp"
             android:text="Your Connections"
             android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="italic" />
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"></TextView>
 
 
         <androidx.recyclerview.widget.RecyclerView

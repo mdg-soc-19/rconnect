@@ -17,11 +17,11 @@
         android:layout_height="269dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:background="@drawable/circle"
+        android:background="#FCE4EC"
         android:gravity="center"
-        android:text="Welcome to
+        android:text=" Welcome to
              R-Connect"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="sans-serif"
         android:textStyle="bold"
         android:textSize="50sp"
         android:textColor="#000000"
@@ -40,7 +40,7 @@
         android:text="To join IIT-R family"
         android:layout_gravity="center"
         android:paddingTop="10dp"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:textColor="#000000">
     </TextView>
 <LinearLayout
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign in"
-        android:textSize="35sp"
+        android:textSize="15sp"
          />
 
     <Button
@@ -63,12 +63,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:text="Sign up"
-        android:textSize="35sp" />
+        android:textSize="15sp" />
 </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="70dp"
+        android:paddingTop="60dp"
         android:layout_gravity="center">
         <TextView
             android:id="@+id/text"

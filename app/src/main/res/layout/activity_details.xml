@@ -19,9 +19,9 @@
             android:background="#AD1457"
             android:text="Details"
             android:textAlignment="center"
-
+            android:padding="5dp"
             android:textColor="#FFFFFF"
-            android:textSize="50sp"></TextView>
+            android:textSize="30sp"></TextView>
 
         <TextView
 
@@ -31,7 +31,7 @@
             android:paddingTop="10dp"
             android:text="Name"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="20sp"></TextView>
 
         <EditText
             android:id="@+id/editText12"
@@ -53,7 +53,7 @@
             android:paddingTop="10dp"
             android:text="Gender"
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="20sp"></TextView>
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,9 +66,9 @@
             android:layout_height="35dp"
             android:text="Male"
             android:layout_marginLeft="20dp"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@drawable/border"
-            android:layout_marginTop="5dp"
+
             android:onClick="onCheckboxClicked"
             />
         <CheckBox
@@ -77,7 +77,7 @@
             android:layout_height="35dp"
             android:layout_marginLeft="20dp"
             android:text="Female"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@drawable/border"
             android:layout_marginTop="5dp"
             android:onClick="onCheckboxClicked"
@@ -93,7 +93,7 @@
             android:text="Branch"
 
             android:textColor="#000000"
-            android:textSize="30sp"></TextView>
+            android:textSize="20sp"></TextView>
 
         <Spinner
             android:id="@+id/spinner"
@@ -111,22 +111,22 @@
                 android:id="@+id/join"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="12dp"
+                android:paddingLeft="28dp"
                 android:paddingTop="20dp"
                 android:text="Joining Year"
                 android:textColor="#000000"
-                android:textSize="30sp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <TextView
                 android:id="@+id/grad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/join"
-                android:paddingLeft="12dp"
+                android:paddingLeft="70dp"
                 android:paddingTop="20dp"
                 android:text="Graduation Year"
                 android:textColor="#000000"
-                android:textSize="30sp"></TextView>
+                android:textSize="20sp"></TextView>
 
         </RelativeLayout>
 
@@ -170,5 +170,13 @@
             android:text="SUBMIT"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000000" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
     </LinearLayout>
 </ScrollView>

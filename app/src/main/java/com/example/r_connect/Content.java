@@ -108,66 +108,6 @@ public class Content extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
-
-/*
-    @Override
-    public void onBackPressed() {
-        drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-
-        } else {
-            super.onBackPressed();
-            getSupportActionBar().setTitle("R-Connect");
-        }
-    }
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-
-        if (id == R.id.nav_home) {
-            getSupportActionBar().setTitle("R-Connect");
-            fragment = new HomeFragment();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-            fragmentTransaction.commit();
-
-        } else if (id == R.id.nav_profile) {
-            getSupportActionBar().setTitle("Your Profile");
-            fragment = new ProfileFragment();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-
-        } else if (id == R.id.nav_connection) {
-            getSupportActionBar().setTitle("Your Connection");
-            fragment = new Connections();
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-
-
-        } else if (id == R.id.nav_logout) {
-
-            FirebaseAuth.getInstance().signOut();
-            currentUser = null;
-            startActivity(new Intent(Content.this, MainActivity.class));
-            drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-
-        }
-
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-
-    }
-*/
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.

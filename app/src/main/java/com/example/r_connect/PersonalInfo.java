@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,7 @@ public class PersonalInfo extends AppCompatActivity {
     EditText e1,e2;
     Button b;
     public Uri downloadURL;
+    ProgressBar progressBar;
     public static final String TAG = "TAG";
     private static final int REQUEST_WRITE_PERMISSION = 786;
     ImageButton ib;
@@ -59,6 +61,7 @@ public class PersonalInfo extends AppCompatActivity {
         e2=findViewById(R.id.editText14);
         b=findViewById(R.id.button33);
         ib=findViewById(R.id.imgbut);
+        progressBar=findViewById(R.id.progressBar);
         imageView=findViewById(R.id.pp);
         fStore = FirebaseFirestore.getInstance();
         ib.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +83,7 @@ public class PersonalInfo extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-
+                    progressBar.setVisibility(View.VISIBLE);
                     final String nname = e1.getText().toString();
                     final String text = e2.getText().toString();
                     final String ig = pickedImgUri.toString();
@@ -95,6 +98,7 @@ public class PersonalInfo extends AppCompatActivity {
                             imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
+                                    progressBar.setVisibility(View.VISIBLE);
                                     downloadURL=uri;
                                     Log.i("URL", uri.toString());
                                     DocumentReference documentReference = fStore.collection("users").document(userID);
@@ -107,6 +111,7 @@ public class PersonalInfo extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful())
                                             {
+                                                progressBar.setVisibility(View.VISIBLE);
                                                 StorageReference mStorage = FirebaseStorage.getInstance().getReference().child(userID);
                                                 final StorageReference imageFilePath = mStorage.child(pickedImgUri.getLastPathSegment());
                                                 imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -124,6 +129,8 @@ public class PersonalInfo extends AppCompatActivity {
                                                                     public void onComplete(@NonNull Task<Void> task) {
 
                                                                         if (task.isSuccessful()) {
+
+                                                                            progressBar.setVisibility(View.VISIBLE);
                                                                             startActivity(new Intent(PersonalInfo.this, AreaOfInterest.class));
                                                                         }
 
@@ -168,6 +175,7 @@ public class PersonalInfo extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             Uri imageUri = CropImage.getPickImageResultUri(this, data);
             Log.i("RESPONSE getPath", imageUri.getPath());
@@ -191,9 +199,9 @@ public class PersonalInfo extends AppCompatActivity {
                 Log.i("RESPONSE getUri", result.getUri().toString());
 
                 //GET CROPPED IMAGE URI AND PASS TO IMAGEVIEW
-                pickedImgUri=result.getUri();
-                if(pickedImgUri!=null)
-                imageView.setImageURI(pickedImgUri);
+                pickedImgUri = result.getUri();
+                if (pickedImgUri != null)
+                    imageView.setImageURI(pickedImgUri);
             }
         }
     }

@@ -73,9 +73,9 @@ public class Profile extends AppCompatActivity {
                         String s2=document.get("Internship").toString();
                         String s3=document.get("Current_Work").toString();String work="";
                         if(s1!="")
-                            work+=s1+"  ";
+                            work+=s1+'\n';
                         if(s2!="")
-                            work+=s2+"  ";
+                            work+=s2+'\n';
                         if(s3!="")
                             work+=s3;
 

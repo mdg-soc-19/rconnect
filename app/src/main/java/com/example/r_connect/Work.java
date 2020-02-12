@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,10 +26,11 @@ public class Work extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText cg,intern,curwork;
     Button mSubmit;
+    ProgressBar progressBar;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
-    CheckBox checkBoxS,checkBoxFre,checkBoxG;
+    CheckBox checkBoxS,checkBoxG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +42,17 @@ public class Work extends AppCompatActivity {
         mSubmit = findViewById(R.id.button11);
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        progressBar = findViewById(R.id.progressBar);
         checkBoxS = (CheckBox) findViewById(R.id.checkBoxS);
         boolean checks = checkBoxS.isChecked();
-        checkBoxFre = (CheckBox) findViewById(R.id.checkBoxFre);
-        boolean checkfre = checkBoxFre.isChecked();
         checkBoxG = (CheckBox) findViewById(R.id.checkBoxG);
         boolean checkgrad = checkBoxG.isChecked();
         if (fAuth.getCurrentUser() != null) {
+
             mSubmit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    progressBar.setVisibility(View.VISIBLE);
                     final String campus_group = cg.getText().toString().trim();
                     final String internship = intern.getText().toString().trim();
                     final String currrent_work = curwork.getText().toString().trim();

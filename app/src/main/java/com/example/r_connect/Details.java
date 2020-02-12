@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -34,6 +35,7 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
     public static final String TAG = "TAG";
     EditText mName, mJoin, mGrad;
     Button mSubmit;
+    ProgressBar progressBar;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -46,6 +48,7 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+        progressBar = findViewById(R.id.progressBar);
         mName = findViewById(R.id.editText12);
         mJoin = findViewById(R.id.editText22);
         mGrad = findViewById(R.id.editText3);
@@ -129,6 +132,7 @@ public class Details extends AppCompatActivity implements AdapterView.OnItemSele
     }
     public void openArea() {
         Intent intent = new Intent(this, PersonalInfo.class);
+        progressBar.setVisibility(View.VISIBLE);
         startActivity(intent);
     }
 
