@@ -62,6 +62,7 @@ public class HomeFragment extends Fragment {
                                   public void onClick(View v) {
                                       progressBar1.setVisibility(View.VISIBLE);
                                       startActivity(new Intent(getActivity(), People.class));
+                                      progressBar1.setVisibility(View.INVISIBLE);
                                   }
                               });
                 userID = fAuth.getCurrentUser().getUid();

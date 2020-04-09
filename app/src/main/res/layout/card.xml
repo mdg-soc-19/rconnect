@@ -34,7 +34,7 @@
        ></TextView>
 
         <ImageView
-            android:id="@+id/connect"
+            android:id="@+id/connect2"
             android:layout_below="@+id/name"
             android:layout_width="35dp"
             android:layout_height="35dp"

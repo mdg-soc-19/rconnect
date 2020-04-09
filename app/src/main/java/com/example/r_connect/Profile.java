@@ -1,5 +1,6 @@
 package com.example.r_connect;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,11 @@ public class Profile extends AppCompatActivity {
     TextView t1,t2,t3,t4,t5,t6,t7;
     CircleImageView profilepic;
 
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(Profile.this, People.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

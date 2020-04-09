@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,6 +41,7 @@ public class People extends AppCompatActivity {
     Query query;
     String userID;
     List<String> group;
+    ProgressDialog progressDialog;
 
 
 
@@ -50,6 +52,12 @@ public class People extends AppCompatActivity {
         setContentView(R.layout.activity_people);
         fAuth = FirebaseAuth.getInstance();
         userID = fAuth.getCurrentUser().getUid();
+        progressDialog = new ProgressDialog(People.this);
+        progressDialog.setMessage("Loading..."); // Setting Message
+        progressDialog.setTitle("Let's Connect"); // Setting Title
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+        progressDialog.show(); // Display Progress Dialog
+        progressDialog.setCancelable(false);
         DocumentReference documentReference = db.collection("users").document(userID);
 
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -77,6 +85,7 @@ public class People extends AppCompatActivity {
             @Override
             public void run() {
                 setUpRecyclerView();
+
             }
         }, 2000);
 
@@ -91,9 +100,11 @@ public class People extends AppCompatActivity {
 
         adapter = new NoteAdapter(options, mcontext,this);
         RecyclerView recyclerView = findViewById(R.id.recycle);
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
     }
 
     @Override
@@ -102,6 +113,7 @@ public class People extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                progressDialog.dismiss();
                 adapter.startListening();
             }
         }, 4000);
@@ -110,6 +122,12 @@ public class People extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        if(adapter!=null)
         adapter.stopListening();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),NavDraw.class));
     }
 }

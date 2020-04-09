@@ -1,5 +1,6 @@
 package com.example.r_connect;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -46,6 +47,8 @@ public class Connections extends Fragment {
     String userID;
     View v;
     List<String> group;
+    ProgressDialog progressDialog;
+    DocumentSnapshot document;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,8 +64,8 @@ public class Connections extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document != null&&!State.area.isEmpty()) {
+                    document = task.getResult();
+                    if (document != null) {
                         group= (List<String>) document.get("Connection");
                         Log.d("LOGGER", group.toString());
 
@@ -77,7 +80,7 @@ public class Connections extends Fragment {
         });
         return v;
     }
-    private void setUpRecyclerView() {Log.d("LOGGER", State.area.toString());
+    private void setUpRecyclerView() {
         query = notebookRef.whereArrayContainsAny("UserId",group);
 
         FirestoreRecyclerOptions<Note> options = new FirestoreRecyclerOptions.Builder<Note>()
@@ -88,20 +91,28 @@ public class Connections extends Fragment {
         RecyclerView recyclerView = v.findViewById(R.id.recycle1);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        progressDialog.dismiss();
         recyclerView.setAdapter(adapter);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        if(!State.area.isEmpty()){
+      progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage("Loading..."); // Setting Message
+        progressDialog.setTitle("Your Connections"); // Setting Title
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+        progressDialog.show(); // Display Progress Dialog
+        progressDialog.setCancelable(false);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                progressDialog.dismiss();
+                if(document!=null){
                 setUpRecyclerView();
-                adapter.startListening();
+                adapter.startListening();}
             }
-        }, 4000);}
+        }, 4000);
 
 
 
@@ -111,6 +122,7 @@ public class Connections extends Fragment {
     public void onStop() {
         super.onStop();
         if(!State.area.isEmpty()){
+            if(adapter!=null)
         adapter.stopListening();
     }}
 }

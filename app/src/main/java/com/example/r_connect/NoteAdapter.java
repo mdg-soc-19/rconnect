@@ -33,7 +33,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.NoteHolder> {
     private Context mcontext;
     private Context context;
-    CircleImageView ppic;
+
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options, Context mcontext,Context context) {
         super(options);
@@ -47,11 +47,12 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
         holder.textViewDescription1.setText(model.getName());
         holder.textViewDescription2.setText(model.getBranch());
         holder.textViewDescription3.setText(model.getYear());
-        holder.image.setImageResource(R.drawable.handshake);
+        holder.image.setImageResource(R.drawable.connect2);
 
         Log.d("LOGGER",s);
         holder.textViewDescription4.setText(s);
-        Picasso.with(mcontext).load(Uri.parse(model.getImageuri())).into(ppic);
+        Picasso.with(holder.ppic.getContext()).cancelRequest(holder.ppic);
+        Picasso.with(mcontext).load(Uri.parse(model.getImageuri())).into(holder.ppic);
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,6 +100,7 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
         TextView textViewDescription3;
         TextView textViewDescription4;
         CardView parentLayout;
+        CircleImageView ppic;
         ImageView image;
 
 
@@ -108,7 +110,7 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
             textViewDescription2 = itemView.findViewById(R.id.branch);
             textViewDescription3 = itemView.findViewById(R.id.yearic);
             textViewDescription4 = itemView.findViewById(R.id.aoi);
-            image= itemView.findViewById(R.id.connect);
+            image= itemView.findViewById(R.id.connect2);
             ppic=itemView.findViewById(R.id.cpic);
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }

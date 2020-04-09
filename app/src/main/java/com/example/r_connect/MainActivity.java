@@ -49,12 +49,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openSignIn() {
         Intent intent = new Intent(this, SignInActivity.class);
+        progressBar1.setVisibility(View.INVISIBLE);
         startActivity(intent);
 
     }
 
     public void openSignUp() {
         Intent intent = new Intent(this, SignUpActivity.class);
+        progressBar1.setVisibility(View.INVISIBLE);
         startActivity(intent);
     }
 }
