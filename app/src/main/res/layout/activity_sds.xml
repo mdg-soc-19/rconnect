@@ -17,7 +17,7 @@
         android:text="Software Development Section"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"></TextView>
+        android:textSize="30sp"></TextView>
     <ImageView
         android:id="@+id/sds"
     android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:text="SDS is a student group that constantly tries to innovate and foster technical activities in campus. It has 4 subgroups:"
         android:layout_marginTop="35dp" android:padding="15dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textColor="#000000"
         android:layout_below="@id/sds"></TextView>
     <TextView
@@ -43,10 +43,11 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:text="SDS Labs"
+        android:padding="10dp"
         android:textAlignment="center"
 
         android:textColor="#ffffff"
-        android:textSize="40sp"></TextView>
+        android:textSize="20sp"></TextView>
     <TextView
         android:id="@+id/pagt2"
         android:layout_toRightOf="@+id/labst1"
@@ -58,23 +59,26 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:text="PAG"
+        android:padding="10dp"
         android:textAlignment="center"
 
         android:textColor="#ffffff"
-        android:textSize="40sp"></TextView>
-    <TextView
-        android:id="@+id/infosect3"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:background="@drawable/round_button"
-        android:layout_below="@+id/labst1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="InfoSec"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="40sp"></TextView>
+        android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/infosect3"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/labst1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_button"
+            android:text="InfoSec"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:textSize="20sp"></TextView>
     <TextView
         android:id="@+id/dsgt4"
         android:layout_toRightOf="@+id/infosect3"
@@ -87,9 +91,9 @@
         android:layout_marginTop="10dp"
         android:text="DSG"
         android:textAlignment="center"
-
+        android:padding="10dp"
         android:textColor="#ffffff"
-        android:textSize="40sp"></TextView>
+        android:textSize="20sp"></TextView>
 
 
     </RelativeLayout>
